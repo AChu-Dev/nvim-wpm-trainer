@@ -3,7 +3,7 @@
 " Maintainer:   Rafał Camlet <raf.camlet@gmail.com>
 " License:      GNU General Public License v3.0
 
-if exists('g:loaded_whid') | finish | endif " prevent loading file twice
+if exists('g:loaded_wpaTrainer') | finish | endif " prevent loading file twice
 
 let s:save_cpo = &cpo
 set cpo&vim
@@ -17,4 +17,4 @@ command! WpmTrainer lua require'wpmTrainer'.wpmTrainer()
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-let g:loaded_whid = 1
+let g:loaded_wpaTrainer = 1
