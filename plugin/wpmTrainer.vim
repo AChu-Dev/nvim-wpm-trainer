@@ -13,6 +13,7 @@ hi def link  wpmTrainerSubHeader   Identifier
 " hi WhidCursorLine ctermbg=238 cterm=none
 
 command! WpmTrainer lua require'wpmTrainer'.wpmTrainer()
+"command WpmTrainer lua require'wpmTrainer.init'.setup({})
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
