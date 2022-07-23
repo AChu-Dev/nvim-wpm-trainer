@@ -13,7 +13,7 @@ local function open_window()
   local border_buf = vim.api.nvim_create_buf(false, true)
 
   vim.api.nvim_buf_set_option(buf, 'bufhidden', 'wipe')
-  vim.api.nvim_buf_set_option(buf, 'filetype', 'whid')
+  vim.api.nvim_buf_set_option(buf, 'filetype', 'wpmTrainer')
 
   local width = vim.api.nvim_get_option("columns")
   local height = vim.api.nvim_get_option("lines")
@@ -55,8 +55,8 @@ local function open_window()
 
   vim.api.nvim_win_set_option(win, 'cursorline', true)
 
-  api.nvim_buf_set_lines(buf, 0, -1, false, { center('What have i done?'), '', ''})
-  api.nvim_buf_add_highlight(buf, -1, 'WhidHeader', 0, 0, -1)
+  api.nvim_buf_set_lines(buf, 0, -1, false, { center('WPM Trainer'), '', ''})
+  api.nvim_buf_add_highlight(buf, -1, 'wpmTrainerHeader', 0, 0, -1)
 end
 
 local function update_view(direction)
@@ -76,7 +76,7 @@ local function update_view(direction)
   api.nvim_buf_set_lines(buf, 1, 2, false, {center('HEAD~'..position)})
   api.nvim_buf_set_lines(buf, 3, -1, false, result)
 
-  api.nvim_buf_add_highlight(buf, -1, 'whidSubHeader', 1, 0, -1)
+  api.nvim_buf_add_highlight(buf, -1, 'wpmTrainerSubHeader', 1, 0, -1)
   vim.api.nvim_buf_set_option(buf, 'modifiable', false)
 end
 
@@ -107,7 +107,7 @@ local function set_mappings()
   }
 
   for k,v in pairs(mappings) do
-    api.nvim_buf_set_keymap(buf, 'n', k, ':lua require"whid".'..v..'<cr>', {
+    api.nvim_buf_set_keymap(buf, 'n', k, ':lua require"wpmTrainer".'..v..'<cr>', {
         nowait = true, noremap = true, silent = true
       })
   end
@@ -121,7 +121,7 @@ local function set_mappings()
   end
 end
 
-local function whid()
+local function wpmTrainer()
   position = 0
   open_window()
   set_mappings()
@@ -130,7 +130,7 @@ local function whid()
 end
 
 return {
-  whid = whid,
+  wpmTrainer = wpmTrainer,
   update_view = update_view,
   open_file = open_file,
   move_cursor = move_cursor,
