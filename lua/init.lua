@@ -1,5 +1,10 @@
 require 'windowManager'
-require 'database'
+require 'database'.read_file()
 require 'logic'
+
+local function setup()
+  
+end
+
 
 
