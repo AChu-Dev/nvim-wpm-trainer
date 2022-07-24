@@ -1,10 +1,7 @@
-local function setup()
-  require 'wpmTrainer'.wpmTrainer()
-  --require 'keymaps'
-  require 'database'.database()
-  --require 'logic'
+local wpmTrainer =  require 'wpmTrainer'
+-- local keymaps = require 'keymaps'
+local database = require 'database'
+-- local logic = require 'logic'
 
-end
-
-
-
+wpmTrainer.wpmTrainer()
+database.database()
