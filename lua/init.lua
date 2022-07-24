@@ -1,4 +1,4 @@
-require 'wpmTrainer'
+--require 'wpmTrainer'
 --require 'keymaps'
 require 'database'.database()
 --require 'logic'
