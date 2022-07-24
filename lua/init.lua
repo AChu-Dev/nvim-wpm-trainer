@@ -1,11 +1,10 @@
---require 'wpmTrainer'
---require 'keymaps'
-require 'database'.database()
---require 'logic'
+local function setup()
+  require 'wpmTrainer'.wpmTrainer()
+  --require 'keymaps'
+  require 'database'.database()
+  --require 'logic'
 
---local function setup()
-  
---end
+end
 
 
 
