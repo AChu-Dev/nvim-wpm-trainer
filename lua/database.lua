@@ -9,9 +9,13 @@ local function read_file(path)
   return content
 end
 
-local fileContent = read_file('word_dumps.words.txt')
-for counter = 1 , 25 do
-  print(fileContent[counter])
+local function database()
+  fileContent = read_file('word_dumps.words.txt')
+  for counter = 1 , 25 do
+    print(fileContent[counter])
+  end
 end
 
-
+return {
+  fileContent = fileContent
+}

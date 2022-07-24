@@ -1,10 +1,11 @@
-require 'windowManager'
-require 'database'.read_file()
-require 'logic'
+require 'wpmTrainer'
+--require 'keymaps'
+require 'database'.database()
+--require 'logic'
 
-local function setup()
+--local function setup()
   
-end
+--end
 
 
 

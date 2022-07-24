@@ -1,7 +1,6 @@
 local api = vim.api
 local buf, win
 local position = 0
-require 'database'.read_file()
 
 local function center(str)
   local width = api.nvim_win_get_width(0)
